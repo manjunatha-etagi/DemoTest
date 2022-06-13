@@ -2,7 +2,7 @@ name: default
 replicas: 1
 
 container:
-  image: nginx:latest
+  image: <+artifact.image>
   port: 80
 
 config:
