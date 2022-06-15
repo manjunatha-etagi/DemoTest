@@ -1,0 +1,17 @@
+template:
+    name: http1
+    identifier: http1
+    versionLabel: v1
+    type: Step
+    projectIdentifier: Manjugit
+    orgIdentifier: default
+    tags: {}
+    spec:
+        type: Http
+        timeout: 10s
+        spec:
+            url: <+input>.allowedValues(test,test1,test2)
+            method: GET
+            headers: []
+            outputVariables: []
+            requestBody: asdasd
