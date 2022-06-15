@@ -15,7 +15,7 @@ template:
                           name: Xczxcz
                           identifier: Xczxcz
                           type: HarnessApproval
-                          timeout: 10d
+                          timeout: 1w 5d
                           spec:
                               approvalMessage: |-
                                   Please review the following information
@@ -26,4 +26,3 @@ template:
                                   disallowPipelineExecutor: false
                                   userGroups:
                                       - account.Approvals
-                              approverInputs: []
