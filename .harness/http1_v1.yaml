@@ -10,7 +10,7 @@ template:
         type: Http
         timeout: 10s
         spec:
-            url: <+input>.allowedValues(test,test1,test2)
+            url: <+input>.allowedValues(test,test1)
             method: GET
             headers: []
             outputVariables: []
