@@ -1,0 +1,16 @@
+connector:
+  name: manju-git-2
+  identifier: manjugit2
+  description:
+  orgIdentifier: default
+  projectIdentifier: Manjugit
+  type: Git
+  spec:
+    url: https://github.com/manjunatha-etagi/DemoTest.git
+    executeOnDelegate: true
+    type: Http
+    connectionType: Repo
+    spec:
+      username: manjunatha-etagi
+      usernameRef: null
+      passwordRef: gitmanjutoken
