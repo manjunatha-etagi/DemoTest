@@ -1,0 +1,25 @@
+pipeline:
+    name: adsaf
+    identifier: adsaf
+    projectIdentifier: Manjugit
+    orgIdentifier: default
+    tags: {}
+    stages:
+        - stage:
+              name: asdasd
+              identifier: asdasd
+              template:
+                  templateRef: stage_deploy_template
+                  versionLabel: v1
+                  templateInputs:
+                      type: Deployment
+                      spec:
+                          execution:
+                              steps:
+                                  - step:
+                                        identifier: dsfsd
+                                        template:
+                                            templateInputs:
+                                                type: Http
+                                                spec:
+                                                    url: <+input>.allowedValues(test,test1,test2)
