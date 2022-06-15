@@ -1,0 +1,45 @@
+template:
+    name: stage deploy template
+    identifier: stage_deploy_template
+    versionLabel: v1
+    type: Stage
+    projectIdentifier: Manjugit
+    orgIdentifier: default
+    tags: {}
+    spec:
+        type: Deployment
+        spec:
+            serviceConfig:
+                serviceRef: caxcds
+                serviceDefinition:
+                    spec:
+                        variables: []
+                    type: Kubernetes
+            infrastructure:
+                environmentRef: dsadas
+                infrastructureDefinition:
+                    type: KubernetesDirect
+                    spec:
+                        connectorRef: org.test
+                        namespace: sadasd
+                        releaseName: release-<+INFRA_KEY>
+                allowSimultaneousDeployments: false
+            execution:
+                steps:
+                    - step:
+                          name: dsfsd
+                          identifier: dsfsd
+                          template:
+                              templateRef: http1
+                              versionLabel: v1
+                              templateInputs:
+                                  type: Http
+                                  spec:
+                                      url: <+input>.allowedValues(test,test1,test2)
+                rollbackSteps: []
+        failureStrategies:
+            - onFailure:
+                  errors:
+                      - AllErrors
+                  action:
+                      type: StageRollback
