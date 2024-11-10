@@ -1,11 +1,8 @@
-name: default
+name: har-testing
 replicas: 1
-
 container:
-  image: ${artifact.metadata.image}
+  image: <+artifact.image>
   port: 80
 
-config:
-  env: default
 
   
